@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["orbit"]  # Explicitly include only the orbit folder
+
+[project]
+name = "Collocation" #~numpy
+version = "0.0.0"
+description = "Collocation method for solving CRTBP orbits."
+readme = "README.md" 
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib"
+]
+authors = [
+    { name = "Yixian Chen", email = "yc9993@princeton.edu" },
+]
+license = { file = "LICENSE" }
+
+[project.scripts]
+orbitrun = "orbit:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = ["error"]
+log_cli_level = "INFO"
+testpaths = [
+  "test",
+]
+
+
+
+
