@@ -1,4 +1,4 @@
-# Ignore directories
+# Ignore run directories, can customize
 rundir/
 
 # Ignore Jupyter notebook files

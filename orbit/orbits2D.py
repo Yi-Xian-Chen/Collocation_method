@@ -6,14 +6,14 @@ from .matrix import collocation_matrix
 
 class CRTBP_orbits:  # 2D - Newton Raphson method  
     
-    def __init__(self, m1: float=1.0, omega: float= 3.0, h: float = 1.0, tol: float = 1e-12, N: int = 100, maxit: int = 100, type: bool = 0):
+    def __init__(self, m1: float=1.0, omega: float= 5.0, h: float = 1.0, tol: float = 1e-12, N: int = 100, maxit: int = 100, type: bool = 1):
         # m1: mass fraction of the binary component on the left (between 0 and 1)
         # omega: two_pi over period
         # h: step fraction for N-R iteration (between 0 and 1), or learning rate
         # tol: numerical tolerance
         # N: number of points that needs to be solved
         # maxit: maximum number of iterations
-        # type: 0 for CBD and 1 for CSD
+        # type: 0 for P-type and 1 for S-type
 
         self.m1 = m1
         self.m2 = 1 - m1  # mass fraction of the right component
@@ -131,12 +131,11 @@ class CRTBP_orbits:  # 2D - Newton Raphson method
         
         print("omega = " + str(self.omega))
         print('iterations:', num)
-        #print("final length of residue is = " + str(errorfunc)) #should write them as history variables
         return
 
 
     def plot(self):
         plt.plot(np.append(self.X,self.X[0]) , np.append(self.Y, self.Y[0]), ls = "--", label="$\omega =$"+str(self.omega))
-        return
+        return 
 
 

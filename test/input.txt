@@ -1,0 +1,22 @@
+m1 0.5
+#mass of primary in terms of total mass
+
+omegamin 6.0
+omegamax 8.0
+#minimum and maximum orbital frequency
+
+omegaN 2
+#number of (linearly) sampled points in frequency space
+
+h 1.0
+tol 1e-8
+maxit 100
+#learning rate, tolerance, and maximum iteration number for NR method
+
+N 100
+#resolution, or number of collocation points in phase over an orbital period
+
+type S
+#orbit type: 
+#S solves for orbits around the primary with omega > 0
+#P solves from orbits around binary with -1 < omega < 0
