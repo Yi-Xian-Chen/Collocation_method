@@ -66,7 +66,9 @@ def main(input_file='input.txt', output_file='output.pdf', x_file='X.txt', y_fil
     X_data = []
     Y_data = []
 
-    
+    plt.figure(figsize = (5,5))
+    plt.title("$M_1=$"+str(m1)+",$\omega \in$ ["+str(omega_values[0])+","+str(omega_values[-1])+"]")
+
     # Iterate over omega values and solve
     for omega in omega_values:
         orbit = CRTBP_orbits(m1=m1, omega=omega, h=h, tol=tol, N=N, maxit=maxit, type=type)

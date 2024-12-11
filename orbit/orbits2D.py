@@ -135,7 +135,8 @@ class CRTBP_orbits:  # 2D - Newton Raphson method
 
 
     def plot(self):
-        plt.plot(np.append(self.X,self.X[0]) , np.append(self.Y, self.Y[0]), ls = "--", label="$\omega =$"+str(self.omega))
+        plt.plot(np.append(self.X,self.X[0]) , np.append(self.Y, self.Y[0]), lw=0.5, color="black")
+        plt.axis("equal")
         return 
 
 
