@@ -1,17 +1,18 @@
 # Collocation Method for Solving RTBP orbits
 
-This python code solves closed orbits in a given potential system using a novel spectral or collocation method, with application to the Restricted Three-Body Problem, where tidally distorted orbits most belong to either the circumstellar (S-type) or circumbinary (P-type family).
+This python code solves closed orbits in a given potential system using a novel spectral or collocation method, with application to the Restricted Three-Body Problem, where tidally distorted orbits typically belong to either the circumstellar (S-type) or circumbinary (P-type family).
 Detailed science and method see companion project report.
 
 ## Installation
 
 ### Prerequisites
 
-To install this python package properly, you will need
+To install this python package properly/efficiently, you will need
 
 - Python 3.8 or higher
 - pip3
 - build
+- make
 
 ### Steps
 
